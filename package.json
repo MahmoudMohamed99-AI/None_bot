@@ -1,0 +1,17 @@
+{
+  "name": "interactive-website-with-nasa-api-data",
+  "version": "1.0.0",
+  "main": "code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@slack/bolt": "^5.1.0",
+    "axios": "^1.20.0",
+    "dotenv": "^18.0.9"
+  }
+}
