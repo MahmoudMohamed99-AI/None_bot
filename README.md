@@ -1,95 +1,42 @@
-# None Bot
+## Project overview
 
-A custom Slack bot built with Slack Bolt for JavaScript that responds to slash commands with useful tools, random cat facts, and jokes.
+I've designed this project for slack bot mission at stardance . 
+It can gives you some jokes ,and cats' facts!
 
-## Features
+## Slash commands
 
-- **Ping** — Check the bot's response latency.
-- **Help** — Display all available commands.
-- **Cat Facts** — Fetch a random cat fact using the Cat Fact API.
-- **Random Jokes** — Get a random joke using the Official Joke API.
+/none-bot-ping - Check bot latency
+/none-bot-help - Show available commands
+/none-bot-catfact - Get a cat fact
+/none-bot-joke - Get a random joke
 
-## Commands
+## Screenshots
 
-| Command | Description |
-|---|---|
-| `/none-bot-ping` | Check the bot's response latency in milliseconds. |
-| `/none-bot-help` | Display the list of available commands. |
-| `/none-bot-catfact` | Get a random fact about cats. |
-| `/none-bot-joke` | Get a random joke. |
+<img width="1917" height="920" alt="Screenshot 2026-10-29 114159" src="https://github.com/user-attachments/assets/80cf0ccb-d3c4-43e1-8e32-eafa400708ab" />
 
-## Built With
+<img width="1568" height="902" alt="Screenshot 2026-10-28 131403" src="https://github.com/user-attachments/assets/a89066bf-830b-48b7-a6f4-f6c9ed1e1a1b" />
 
-- [Node.js](https://nodejs.org/)
-- [Slack Bolt for JavaScript](https://slack.dev/bolt-js/)
-- [Axios](https://axios-http.com/)
-- [dotenv](https://github.com/motdotla/dotenv)
 
-## APIs Used
+## Required Permissions / Scopes
 
-- [Cat Fact API](https://catfact.ninja/)
-- [Official Joke API](https://official-joke-api.appspot.com/)
+- commands — Required for Slack slash commands.
+- connections:write — Required for the App-Level Token used by Socket Mode.
+- SLACK_BOT_TOKEN — The bot's authentication token.
+- SLACK_APP_TOKEN — The token used to establish the Socket Mode connection.
+- Socket Mode must be enabled in your Slack app settings.
 
-## Setup
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/MahmoudMohamed99-AI/None_bot.git
+## Self-Hosting
+ 
+The commands to get started are:
+1.git clone https://github.com/MahmoudMohamed99-AI/None_bot.git
 cd None_bot
-```
-
-### 2. Install Dependencies
-
-```bash
 npm install
-```
-
-### 3. Configure Environment Variables
-
-Create a `.env` file in the project root:
-
-```env
-SLACK_BOT_TOKEN=xoxb-your-bot-token
-SLACK_APP_TOKEN=xapp-your-app-token
-```
-
-Replace the placeholders with your own Slack tokens. Never commit your `.env` file or share your tokens publicly.
-
-### 4. Configure Slack
-
-- Enable Socket Mode in your Slack app settings.
-- Generate an app-level token with the `connections:write` scope.
-- Add the required bot permissions and configure all four slash commands.
-- Install or reinstall the app to your Slack workspace if required.
-
-### 5. Run the Bot
-
-```bash
+2.Create a .env file in the project directory and add your Slack credentials:
+SLACK_BOT_TOKEN=your_bot_token
+SLACK_APP_TOKEN=your_app_token
+2.Enable Socket Mode in your Slack app settings, configure the required scopes, and install the app in your workspace. Then start the bot:
 node index.js
-```
 
-When it starts successfully, the terminal prints:
 
-```text
+If the setup succeeds, the terminal should display:
 bot is running!
-```
-
-## Hosting
-
-The bot can run on a server so it can remain available when your personal computer is turned off. Continuous availability depends on the hosting service and its process-management configuration.
-
-## Security
-
-- Keep Slack tokens private.
-- Store credentials in environment variables.
-- Do not commit `.env` to GitHub.
-- Rotate any token that may have been exposed.
-
-## Project Goal
-
-This project was created for the Stardance Slack Bot mission. It demonstrates custom Slack slash commands, API integration, asynchronous JavaScript, and environment-variable configuration.
-
----
-
-Made with JavaScript and Slack Bolt.
